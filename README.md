@@ -18,6 +18,7 @@ gdy odpowiedź nie wraca lub jest opóźniona.
 ## Architektura
 
 Klient ---> Proxy ---> Backend
+
 Klient <--- Proxy <--- Backend
 
 ## Budowanie
