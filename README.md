@@ -21,6 +21,19 @@ Klient ---> Proxy ---> Backend
 
 Klient <--- Proxy <--- Backend
 
+Dodatkowy graf ilustrujacy działanie
+
+[ nc -l 8080 ]        = backend
+        ▲
+        │ TCP
+        │
+[ tcp_proxy :9000 ]   = proxy
+        ▲
+        │ TCP
+        │
+[ nc 127.0.0.1 9000 ] = klient
+
+
 ## Budowanie
 
 ```bash
