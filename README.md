@@ -34,6 +34,19 @@ Dodatkowy graf ilustrujacy działanie
 [ nc 127.0.0.1 9000 ] = klient
 
 
+## Testowanie (ręcznie)
+Proxy bylo manualnie testowane z uzyciem netcat(nc) w celu zweryfikowania end-to-end TCP forwarding i polączenia pomiędzy 'lifecycle behavior'
+
+### Start backend server
+'''bash
+nc -l 8080
+
+### Start proxy
+./tcp_proxy
+
+### Start client
+nc 127.0.0.1 9000
+
 ## Budowanie
 
 ```bash
@@ -41,3 +54,4 @@ cd cpp/proxy
 mkdir build && cd build
 cmake ..
 make
+
