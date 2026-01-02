@@ -47,6 +47,22 @@ nc -l 8080
 ### Start client
 nc 127.0.0.1 9000
 
+W katalogu python/ znajduje się prosty framework scenariuszy testowych, który symuluje rzeczywiste problemy sieciowe.
+
+Przykładowe scenariusze:
+
+wolny klient (wysyłanie danych bajt po bajcie),
+
+brak odpowiedzi backendu (timeout),
+
+nagłe zerwanie połączenia w trakcie transmisji.
+
+Uruchamianie scenariuszy:
+
+python scenarios.py backend-timeout
+python scenarios.py slow-client
+python scenarios.py disconnect
+
 ## Budowanie
 
 ```bash
