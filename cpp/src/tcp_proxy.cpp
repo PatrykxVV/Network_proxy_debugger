@@ -85,6 +85,9 @@ static void handle_client(int client_fd,
                           const char* backend_ip,
                           int backend_port)
 {
+
+    std::cerr << "[DEBUG] handle_client started\n";
+
     // Zwiększamy licznik połączeń
     active_connections.fetch_add(1);
     std::cout << "[proxy] client connected, active="
